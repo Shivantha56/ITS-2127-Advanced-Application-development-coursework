@@ -42,7 +42,7 @@ export default function OnBoardingScreen() {
 
                 </View>
                 <TouchableOpacity onPress={() => router.push("/(routes)/welcome-intro/")} style={style.buttonWrapper}>
-                    <Text style={[style.buttonText, { fontFamily: "Nunito_700Regular" }]}>
+                    <Text style={[style.buttonText, { fontFamily: "Nunito_700Bold" }]}>
                         Getting Started
                     </Text>
                 </TouchableOpacity>

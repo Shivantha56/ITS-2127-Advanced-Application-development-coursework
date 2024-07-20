@@ -7,19 +7,20 @@ import { Stack } from 'expo-router';
 
 export default function RootLayout() {
 
-  const [isLoggedIn,setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const colorScheme = useColorScheme();
-  
+
   return (
-      <>
-        {isLoggedIn ? (
-          <View></View>
-        ):(
-          <Stack screenOptions={{headerShown:false}}>
-            <Stack.Screen name='(routes)/onboarding/index' />
-            <Stack.Screen name='(routes)/welcome-intro/index'/>
-          </Stack>
-        )}
-      </>
+    <>
+      {isLoggedIn ? (
+        <View></View>
+      ) : (
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='/index' />
+          <Stack.Screen name='(routes)/onboarding/index' />
+          <Stack.Screen name='(routes)/welcome-intro/index' />
+        </Stack>
+      )}
+    </>
   );
 }

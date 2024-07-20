@@ -50,5 +50,8 @@ export const style = StyleSheet.create({
     buttonText:{
         color:"white",
         textAlign:"center"
+    },
+    welcomeButtonStyle:{
+        backgroundColor:""
     }
 });
