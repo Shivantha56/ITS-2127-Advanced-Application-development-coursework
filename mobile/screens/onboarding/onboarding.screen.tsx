@@ -4,6 +4,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient"
 import { style } from '@/styles/onboarding/onboard'
+import {router} from "expo-router"
 
 export default function OnBoardingScreen() {
     let [fontsLoaded, fontError] = useFonts({
@@ -40,7 +41,7 @@ export default function OnBoardingScreen() {
                     </Text>
 
                 </View>
-                <TouchableOpacity style={style.buttonWrapper}>
+                <TouchableOpacity onPress={() => router.push("/(routes)/welcome-intro/")} style={style.buttonWrapper}>
                     <Text style={[style.buttonText, { fontFamily: "Nunito_700Regular" }]}>
                         Getting Started
                     </Text>

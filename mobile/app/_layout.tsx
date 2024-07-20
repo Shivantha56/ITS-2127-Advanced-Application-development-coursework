@@ -1,11 +1,6 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
-// import 'react-native-reanimated';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { View } from 'react-native';
-import OnBoarding from './(routes)/onboarding/index';
+import { Stack } from 'expo-router';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 // SplashScreen.preventAutoHideAsync();
@@ -20,7 +15,10 @@ export default function RootLayout() {
         {isLoggedIn ? (
           <View></View>
         ):(
-          <OnBoarding />
+          <Stack screenOptions={{headerShown:false}}>
+            <Stack.Screen name='(routes)/onboarding/index' />
+            <Stack.Screen name='(routes)/welcome-intro/index'/>
+          </Stack>
         )}
       </>
   );
